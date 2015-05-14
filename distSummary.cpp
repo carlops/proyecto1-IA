@@ -59,7 +59,7 @@ int main( int argc, char **argv )
         init_bwd_iter( &iter, &state );
         while( ( ruleid = next_ruleid( &iter ) ) >= 0 ) {
             apply_bwd_rule( ruleid, &state, &child );
-            const int child_d = d + get_bwd_rule_cost( rule );
+            const int child_d = d + get_bwd_rule_cost( ruleid );
 
             /* check if either this child has not been seen yet or if
                there is a new cheaper way to get to this child. */
